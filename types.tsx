@@ -26,13 +26,14 @@ export type ChatRoom = {
 };
 
 export type User = {
-  id: String;
-  name: String;
+  id: string;
+  name: string;
   imageUri: string;
 };
 
 export type Message = {
-  id: String;
-  content: String;
+  id: string;
+  content: string;
+  user: User;
   createdAt: string;
 };
