@@ -28,7 +28,7 @@ export type ChatRoom = {
 export type User = {
   id: string;
   name: string;
-  imageUri: string;
+  imageUri?: string;
 };
 
 export type Message = {

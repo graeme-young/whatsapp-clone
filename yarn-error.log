@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @tyypes/expo
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @react-navigation/masked-view
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2019.5.281\windows\mpi\intel64\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_241\bin;C:\Program Files (x86)\Brackets\command;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\PostgreSQL\13\bin\;C:\Users\Graeme\Documents\Program Install Files\Redis\Redis-x64-3.0.504;C:\Users\Graeme\AppData\Local\Programs\Python\Python37\Scripts\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Graeme\AppData\Local\Android\Sdk\platform-tools;C:\Users\Graeme\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Graeme\AppData\Local\Programs\Python\Python37\;C:\Users\Graeme\AppData\Local\Microsoft\WindowsApps;C:\Users\Graeme\.dotnet\tools;C:\Users\Graeme\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Graeme\AppData\Local\atom\bin;C:\Users\Graeme\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\Graeme\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\Graeme\AppData\Local\Microsoft\WindowsApps;C:\Users\Graeme\AppData\Local\Yarn\bin;C:\Program Files\PostgreSQL\13\bin\;C:\Users\Graeme\AppData\Local\Android\Sdk\platform-tools;
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@tyypes%2fexpo: Not found
+  Error: https://registry.yarnpkg.com/@react-navigation%2fmasked-view: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
       at Request.emit (events.js:315:20)
@@ -47,6 +47,7 @@ npm manifest:
       "@react-navigation/material-top-tabs": "^5.2.19",
       "@react-navigation/native": "^5.7.3",
       "@react-navigation/stack": "^5.9.0",
+      "@types/expo": "^33.0.1",
       "expo": "~39.0.2",
       "expo-asset": "~8.2.0",
       "expo-constants": "~9.2.0",
@@ -61,7 +62,7 @@ npm manifest:
       "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
       "react-native-gesture-handler": "~1.7.0",
       "react-native-reanimated": "^1.13.1",
-      "react-native-safe-area-context": "3.1.4",
+      "react-native-safe-area-context": "^3.1.8",
       "react-native-screens": "~2.10.1",
       "react-native-tab-view": "^2.15.2",
       "react-native-web": "~0.13.12"
@@ -69,8 +70,10 @@ npm manifest:
     "devDependencies": {
       "@babel/core": "~7.9.0",
       "@types/react": "~16.9.35",
+      "@types/react-dom": "^16.9.8",
       "@types/react-native": "~0.63.2",
       "@types/react-navigation": "^3.4.0",
+      "@types/react-test-renderer": "^16.9.3",
       "jest-expo": "~39.0.0",
       "typescript": "~3.9.5"
     },
@@ -2093,6 +2096,13 @@ Lockfile:
     dependencies:
       "@babel/types" "^7.3.0"
   
+  "@types/expo@^33.0.1":
+    version "33.0.1"
+    resolved "https://registry.yarnpkg.com/@types/expo/-/expo-33.0.1.tgz#e9da2e0754e988906b54837a612d11011bee1bd6"
+    integrity sha512-0ka6bRIgfhkq3whAv3mOE/jMEGJFhbFYPA9ADS/nak/nDyaUoCIhD6bWf0yt+a5m0IKK9x0FeUkFkDVHY7+O4w==
+    dependencies:
+      expo "*"
+  
   "@types/graceful-fs@^4.1.2":
     version "4.1.3"
     resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.3.tgz#039af35fe26bec35003e8d86d2ee9c586354348f"
@@ -2145,6 +2155,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
     integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
   
+  "@types/react-dom@^16.9.8":
+    version "16.9.8"
+    resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.8.tgz#fe4c1e11dfc67155733dfa6aa65108b4971cb423"
+    integrity sha512-ykkPQ+5nFknnlU6lDd947WbQ6TE3NNzbQAkInC2EKY1qeYdTKp7onFusmYZb+ityzx2YviqT6BXSu+LyWWJwcA==
+    dependencies:
+      "@types/react" "*"
+  
   "@types/react-native@~0.63.2":
     version "0.63.27"
     resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.27.tgz#c97ecad8183bc15e33a6f355420cf20ce990c633"
@@ -2158,6 +2175,13 @@ Lockfile:
     integrity sha512-Y7F5zU8BTBK8tEOvUqgvwvPZ7+9vnc2UI1vHwJ/9ZJG98TntNv04GWa6lrn4MA4149pqw6cyNw/V49Yd2osAFQ==
     dependencies:
       react-navigation "*"
+  
+  "@types/react-test-renderer@^16.9.3":
+    version "16.9.3"
+    resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.9.3.tgz#96bab1860904366f4e848b739ba0e2f67bcae87e"
+    integrity sha512-wJ7IlN5NI82XMLOyHSa+cNN4Z0I+8/YaLl04uDgcZ+W+ExWCmCiVTLT/7fRNqzy4OhStZcUwIqLNF7q+AdW43Q==
+    dependencies:
+      "@types/react" "*"
   
   "@types/react@*", "@types/react@~16.9.35":
     version "16.9.53"
@@ -3774,7 +3798,7 @@ Lockfile:
     dependencies:
       compare-urls "^2.0.0"
   
-  expo@~39.0.2:
+  expo@*, expo@~39.0.2:
     version "39.0.3"
     resolved "https://registry.yarnpkg.com/expo/-/expo-39.0.3.tgz#55d10609b2df9b8d511acb4f3e72e4dc162e6b27"
     integrity sha512-pbLlkq43XDViEQpzgIW8hEPRibwjSml1uZQ3imPpCDfjMGlq7J6+IIN7q4kd+Hp+W0J6w6INYPR0E/dxdEBkSw==
@@ -6915,6 +6939,11 @@ Lockfile:
     version "3.1.4"
     resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.1.4.tgz#9b7f883a5ae8da6218d17467a350434005893602"
     integrity sha512-bXx3hqz4LovFoMnJIRGIWL2oJ/PHadXviBKvgZV9yNErtURQLJSn0yfQytVtiqslhaBMZOJwH4R6HiClyofvBg==
+  
+  react-native-safe-area-context@^3.1.8:
+    version "3.1.8"
+    resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.1.8.tgz#7a9883aa0f38f9c77d4bef2b89e4e285bc1024a3"
+    integrity sha512-9gUlsDZ96QwT9AKzA6aVWM/NX5rlJgauZ9HgCDVzKbe29UQYT1740QJnnaI2GExmkFGp6o7ZLNhCXZW95eYVFA==
   
   react-native-safe-area-view@^0.14.9:
     version "0.14.9"
