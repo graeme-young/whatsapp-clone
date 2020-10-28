@@ -12,7 +12,7 @@ interface ChatListItemProps {
 const ChatListItem: React.FC<ChatListItemProps> = ({ chatRoom }) => {
   const navigation = useNavigation();
 
-  const onClick = () => {
+  const onPress = () => {
     navigation.navigate("ChatRoomScreen", {
       id: chatRoom.id,
       name: chatRoom.users[1].name,
@@ -20,7 +20,7 @@ const ChatListItem: React.FC<ChatListItemProps> = ({ chatRoom }) => {
   };
 
   return (
-    <TouchableWithoutFeedback onPress={onClick}>
+    <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.container}>
         <View style={styles.leftContainer}>
           <Image
